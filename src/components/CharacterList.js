@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
-
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
-
-  return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
-  );
-}
+function CharacterList(props){
+  return(
+  <div className='card-div'>
+  <p>Name: {props.character.name}</p>
+  <p>Status: {props.character.status}</p>
+  <p>Species: {props.character.species}</p>
+  <p>Gender: {props.character.gender}</p>
+  <p>Homeworld: {props.character.origin.name}</p>
+  
+      
+  </div>
+  )
+  }
+  
+  export default CharacterList
